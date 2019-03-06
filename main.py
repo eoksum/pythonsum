@@ -22,11 +22,10 @@ def toplama2(sayilar):
 	sum = 0
 	sum2 = 0
 	
-	for _ in range(len(sayilar)):
+	for ind in range(len(sayilar)-1):
 		
-		sum2 = sayilar[0] + sayilar[1]
-		sum = sum + sum2
-		sayilar = sayilar[:2]
+		sum = sayilar[ind] + sayilar[ind + 1]
+		sayilar[ind + 1] = sum #Swap
 		
 	return sum
 	
